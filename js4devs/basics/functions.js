@@ -42,15 +42,16 @@ const name = 'Peter';
 
 // callbacks
 function doSomething(callBack) {
-  console.log(callBack);
   setTimeout(function () {
     const name = 'Klaus';
-    console.log(name);
-
     callBack(name);
   }, 1000);
   // return undefined; implizit
 }
+
+// function handleClick(event) {}
+// document.querySelector('button').addEventListener('click', handleClick);
+// document.querySelector('button').addEventListener('click', function (event) {});
 
 function greetKlaus(name) {
   console.log('Hallo ', name);
@@ -60,3 +61,50 @@ doSomething(greetKlaus);
 
 console.log(greetKlaus); // [Function: greetKlaus] - das Funktionsobjekt
 console.log(greetKlaus()); // Referenz auf den Rückgabewert
+
+// Arrow Function
+const arr = [1, 2, 3];
+const arr2 = arr.map(function (element) {
+  return element * element;
+});
+console.log(arr2);
+
+// parameterklammern optional
+// bei einem statement {} und return optional
+const arr3 = arr.map((element) => {
+  return element * element;
+});
+const arr4 = arr.map((element) => element * element);
+console.log(arr4);
+
+const obj = {
+  value: 10_000,
+  getValue() {
+    // setTimeout(
+    //   function () {
+    //     console.log('Value: ', this.value);
+    //   }.bind(this),
+    //   1000,
+    // );
+    setTimeout(() => {
+      // this => umgebender Kontext
+      console.log('Value: ', this.value);
+    }, 1000);
+  },
+};
+obj.getValue();
+
+function addToTen(a, b = 10) {
+  return a + b;
+}
+console.log(addToTen(4));
+
+// doIt();
+
+// const doIt = () => {
+//   console.log('doit');
+// };
+
+// const doIt = function() {
+//   console.log('doit');
+// };

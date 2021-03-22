@@ -20,3 +20,9 @@ git@github.com:sspringer82/jsdays2021.git
 - https://www.npmjs.com/
 - https://yarnpkg.com/
 - https://github.com/pnpm/pnpm
+
+## immutable
+
+- https://immutable-js.github.io/immutable-js/
+- https://github.com/immerjs/immer
+- https://github.com/kolodny/immutability-helper
