@@ -26,3 +26,9 @@ git@github.com:sspringer82/jsdays2021.git
 - https://immutable-js.github.io/immutable-js/
 - https://github.com/immerjs/immer
 - https://github.com/kolodny/immutability-helper
+
+## Styleguides
+
+- https://standardjs.com/
+- https://google.github.io/styleguide/jsguide.html
+- https://github.com/airbnb/javascript
