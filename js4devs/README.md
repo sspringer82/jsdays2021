@@ -13,6 +13,7 @@ git@github.com:sspringer82/jsdays2021.git
 - https://docs.npmjs.com/cli/v7/configuring-npm/package-json
 - https://webpack.js.org/
 - https://developer.mozilla.org/de/docs/Web/JavaScript/Data_structures
+- https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators
 
 ## Packagemanager
 
