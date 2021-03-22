@@ -12,6 +12,7 @@ git@github.com:sspringer82/jsdays2021.git
 - https://www.jetbrains.com/help/idea/code-with-me.html
 - https://docs.npmjs.com/cli/v7/configuring-npm/package-json
 - https://webpack.js.org/
+- https://developer.mozilla.org/de/docs/Web/JavaScript/Data_structures
 
 ## Packagemanager
 
