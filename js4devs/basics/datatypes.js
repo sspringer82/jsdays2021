@@ -35,6 +35,8 @@ console.log(typeof n5); // number
 console.log(isNaN(n5));
 console.log(Math.sqrt(-1));
 
+console.log('value: ', (5).valueOf());
+
 // string
 const s1 = 'str"i"ng';
 const s2 = "str'i'ng";
@@ -45,6 +47,8 @@ const s3 = `Hallo
 ${name}`;
 console.log(s3);
 
+console.log(s2.toUpperCase());
+
 const sym = Symbol('foo');
 
 const o = {
@@ -54,3 +58,22 @@ const o = {
 };
 console.log(o[sym]);
 console.log(sym);
+
+const obj = {
+  name: 'Klaus',
+  greet() {
+    return `Hallo ${this.name}`;
+  },
+};
+console.log(obj.name);
+obj.name = 'Peter';
+console.log(obj.name);
+console.log(obj.greet());
+
+const arr = [1, 2, 3];
+const arr2 = new Array();
+arr.push(4);
+console.log(arr.length);
+console.log(arr[0]);
+arr[0] = 42;
+console.log(arr[0]);
