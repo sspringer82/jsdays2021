@@ -1,8 +1,18 @@
 export default class User {
-  constructor(public firstname: string, public lastname: string) {}
+  age = 42;
+
+  constructor(
+    public firstname: string,
+    public lastname: string,
+    public id: number,
+  ) {}
+
+  private concatenateName() {
+    return `${this.firstname} ${this.lastname}`;
+  }
 
   getFullname(): string {
-    return `${this.firstname} ${this.lastname}`;
+    return this.concatenateName();
   }
 
   greet(): void {
