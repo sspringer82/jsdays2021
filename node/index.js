@@ -1,12 +1,19 @@
 const Questionaire = require('./questionaire');
+const random = require('random');
 
 const q = new Questionaire();
 
-const tasks = [
-  {o1: 1, o2: 2, r: 3}
-  {o1: 2, o2: 2, r: 4}
-  {o1: 4, o2: 4, r: 8}
-];
+let tasks = [
+  { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
+  { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
+  { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
+].map((e) => ({ ...e, r: e.o1 + e.o2 }));
+
+console.log(tasks);
+
+function getRandomNumber() {
+  return random.int((min = 0), (max = 10));
+}
 
 q.question('a')
   .then((answer) => {
@@ -18,7 +25,7 @@ q.question('a')
     console.log('Answer: ', answer);
 
     return q.question('c');
-  )
+  })
   .then((answer) => {
     console.log('Answer: ', answer);
 

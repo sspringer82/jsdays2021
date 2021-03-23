@@ -11,5 +11,8 @@
     "trainer"
   ],
   "author": "Basti <sebastian.springer@maibornwolff.de>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "random": "^3.0.3"
+  }
 }
