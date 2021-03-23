@@ -16,7 +16,10 @@ export default class Questionaire {
         if (parseInt(answer, 10) === task.r) {
           console.log(chalk.green.bold('richtig'), emoji.emojify(':beers:'));
         } else {
-          console.log(chalk.red.bold('falsch'), emoji.emojify(':skull:'));
+          console.log(
+            chalk.red.bold('Das war leider nicht richtig.'),
+            emoji.emojify(':skull:'),
+          );
         }
         resolve(answer);
       });

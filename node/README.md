@@ -14,3 +14,10 @@
 $ npm install
 $ npm start
 ```
+
+# work on CLI
+
+s
+
+- for dev: npm link
+- for prod: npm i -g .
