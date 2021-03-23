@@ -7,3 +7,10 @@
 - https://kangax.github.io/compat-table/es6/
 - https://github.com/nvm-sh/nvm
 - https://www.npmtrends.com/
+
+# getting started
+
+```
+$ npm install
+$ npm start
+```

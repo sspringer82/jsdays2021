@@ -1,20 +1,10 @@
-// const readline = require('readline');
+import Questionaire from './questionaire.mjs';
+import createTasks from './tasks.mjs';
 
-// import readline from 'readline';
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout,
-// });
+const q = new Questionaire();
+const tasks = createTasks(10);
 
-import { createInterface } from 'readline';
-const rl = createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-rl.question('What do you think of Node.js? ', (answer) => {
-  // TODO: Log the answer in a database
-  console.log(`Thank you for your valuable feedback: ${answer}`);
-
-  rl.close();
-});
+for (let i = 0; i < tasks.length; i++) {
+  await q.question(tasks[i]);
+}
+q.close();
