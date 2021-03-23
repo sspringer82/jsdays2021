@@ -3,11 +3,16 @@ const random = require('random');
 
 const q = new Questionaire();
 
-let tasks = [
-  { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
-  { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
-  { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
-].map((e) => ({ ...e, r: e.o1 + e.o2 }));
+const tasks = new Array(10)
+  .fill({})
+  .map((e) => ({ o1: getRandomNumber(), o2: getRandomNumber(), r: 0 }))
+  .map((e) => ({ ...e, r: e.o1 + e.o2 }));
+
+// let tasks = [
+//   { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
+//   { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
+//   { o1: getRandomNumber(), o2: getRandomNumber(), r: 0 },
+// ].map((e) => ({ ...e, r: e.o1 + e.o2 }));
 
 console.log(tasks);
 
