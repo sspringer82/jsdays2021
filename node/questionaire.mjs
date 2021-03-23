@@ -16,7 +16,6 @@ export default class Questionaire {
         } else {
           console.log('falsch');
         }
-        // TODO: Log the answer in a database
         resolve(answer);
       });
     });
