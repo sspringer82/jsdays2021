@@ -36,10 +36,12 @@ describe('questionaire', () => {
 
   it('should handle the answer wrong', () => {
     // arrange
-    const q = new Questionaire();
+    const questionaire = new Questionaire();
     const resolve = jest.fn();
+
     // act
-    q.handleAnwswer(resolve, { r: 9 }, 10);
+    questionaire.handleAnwswer(resolve, { r: 9 }, 10);
+
     // assert
     expect(resolve).toHaveBeenCalledWith(false);
   });
