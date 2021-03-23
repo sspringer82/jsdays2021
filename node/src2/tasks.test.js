@@ -27,4 +27,16 @@ describe('createTasks()', () => {
     expect(result[0].o2).toBe(2);
     expect(result[0].r).toBe(4);
   });
+
+  it('should fail if we provide -1', () => {
+    expect(() => createTasks(-1)).toThrowError('wrong number');
+  });
+
+  it('should handle big numbers', () => {
+    expect(() => createTasks(9007199254740992)).toThrow();
+  });
+
+  it('should fail for booleans', () => {
+    expect(() => createTasks(true)).toThrow();
+  });
 });

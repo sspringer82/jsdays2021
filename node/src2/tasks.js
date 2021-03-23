@@ -5,6 +5,9 @@ function getRandomNumber() {
 }
 
 module.exports = function createTasks(number = 1) {
+  if (number <= 0 || !Number.isInteger(number)) {
+    throw new Error('wrong number');
+  }
   return new Array(number)
     .fill({})
     .map((e) => ({ o1: getRandomNumber(), o2: getRandomNumber(), r: 0 }))
