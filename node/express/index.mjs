@@ -1,10 +1,12 @@
 import express from 'express';
 import morgan from 'morgan';
 import { createWriteStream } from 'fs';
+import helmet from 'helmet';
 
 import userRouter from './user/index.mjs';
 
 const app = express();
+app.use(helmet());
 
 // logger
 const accessLogStream = createWriteStream('./access.log', {
