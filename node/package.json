@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.mjs",
+    "test:coverage": "jest --collectCoverage",
     "test": "jest --watch"
   },
   "bin": {

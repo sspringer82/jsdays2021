@@ -7,6 +7,8 @@
 - https://kangax.github.io/compat-table/es6/
 - https://github.com/nvm-sh/nvm
 - https://www.npmtrends.com/
+- https://sandimetz.com/99bottles
+- https://www.amazon.de/xUnit-Test-Patterns-Refactoring-Signature/dp/0131495054
 
 # getting started
 
