@@ -14,6 +14,7 @@
   "author": "Basti <sebastian.springer@maibornwolff.de>",
   "license": "ISC",
   "dependencies": {
+    "commander": "^7.2.0",
     "random": "^3.0.3"
   }
 }

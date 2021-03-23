@@ -1,10 +1,10 @@
+import getOptions from './cli.mjs';
 import Questionaire from './questionaire.mjs';
 import createTasks from './tasks.mjs';
 
-console.log(process.argv);
-
+const options = getOptions();
 const q = new Questionaire();
-const tasks = createTasks(10);
+const tasks = createTasks(options.length);
 
 for (let i = 0; i < tasks.length; i++) {
   await q.question(tasks[i]);
