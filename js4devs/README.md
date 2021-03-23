@@ -33,3 +33,8 @@ git@github.com:sspringer82/jsdays2021.git
 - https://standardjs.com/
 - https://google.github.io/styleguide/jsguide.html
 - https://github.com/airbnb/javascript
+
+## Literatur
+- https://www.amazon.de/JavaScript-umfassende-Handbuch-Philip-Ackermann/dp/3836238381
+- https://github.com/getify/You-Dont-Know-JS
+- https://exploringjs.com/
