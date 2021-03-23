@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env PORT=8081 node index.mjs",
+    "start": "cross-env PORT=8081 nodemon index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7"
   },
   "dependencies": {
     "dotenv": "^8.2.0"
