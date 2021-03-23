@@ -1,4 +1,5 @@
 import { createInterface } from 'readline';
+import chalk from 'chalk';
 
 export default class Questionaire {
   constructor() {
@@ -12,9 +13,9 @@ export default class Questionaire {
     return new Promise((resolve, reject) => {
       this.rl.question(`${task.o1} + ${task.o2}: `, (answer) => {
         if (parseInt(answer, 10) === task.r) {
-          console.log('richtig');
+          console.log(chalk.blue.bold('richtig'));
         } else {
-          console.log('falsch');
+          console.log(chalk.yellow.bold('falsch'));
         }
         resolve(answer);
       });
