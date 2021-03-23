@@ -1,11 +1,22 @@
 import express from 'express';
+import morgan from 'morgan';
+import { createWriteStream } from 'fs';
 
 const app = express();
 
+// logger
+const accessLogStream = createWriteStream('./access.log', {
+  flags: 'a',
+});
+app.use(morgan('combined', { stream: accessLogStream }));
+
+// empty middleware
 app.use((req, res, next) => {
-  console.log(req);
   next();
 });
+
+// body parser
+app.use(express.json());
 
 app.get('/:id', (req, res) => {
   console.log(req.params.id);
