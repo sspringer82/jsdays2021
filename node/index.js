@@ -1,20 +1,20 @@
-// const readline = require('readline');
+const Questionaire = require('./questionaire');
 
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout,
-// });
+const q = new Questionaire();
 
-const { createInterface } = require('readline');
+q.question('a')
+  .then((answer) => {
+    console.log('Answer: ', answer);
 
-const rl = createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+    return q.question('b');
+  })
+  .then((answer) => {
+    console.log('Answer: ', answer);
 
-rl.question('What do you think of Node.js? ', (answer) => {
-  // TODO: Log the answer in a database
-  console.log(`Thank you for your valuable feedback: ${answer}`);
+    return q.question('c');
+  })
+  .then((answer) => {
+    console.log('Answer: ', answer);
 
-  rl.close();
-});
+    q.close();
+  });
