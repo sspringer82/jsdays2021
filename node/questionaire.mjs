@@ -1,5 +1,6 @@
 import { createInterface } from 'readline';
 import chalk from 'chalk';
+import emoji from 'node-emoji';
 
 export default class Questionaire {
   constructor() {
@@ -13,9 +14,9 @@ export default class Questionaire {
     return new Promise((resolve, reject) => {
       this.rl.question(`${task.o1} + ${task.o2}: `, (answer) => {
         if (parseInt(answer, 10) === task.r) {
-          console.log(chalk.blue.bold('richtig'));
+          console.log(chalk.green.bold('richtig'), emoji.emojify(':beers:'));
         } else {
-          console.log(chalk.yellow.bold('falsch'));
+          console.log(chalk.red.bold('falsch'), emoji.emojify(':skull:'));
         }
         resolve(answer);
       });
