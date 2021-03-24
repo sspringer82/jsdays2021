@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.code === 'Enter') {
         loop.toggleMoving();
+      } else if (e.code === 'Space') {
+        player.jump();
       }
     });
     player.y = 202;
