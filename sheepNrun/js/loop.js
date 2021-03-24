@@ -1,0 +1,18 @@
+class Loop {
+  constructor(context, player, background, platforms) {
+    this.context = context;
+    this.player = player;
+    this.background = background;
+    this.platforms = platforms;
+  }
+
+  update(timestamp) {}
+
+  render() {}
+
+  step(timestamp) {
+    this.update(timestamp);
+    this.render();
+    requestAnimationFrame(this.step.bind(this));
+  }
+}
