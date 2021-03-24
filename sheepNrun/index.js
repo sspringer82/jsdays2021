@@ -16,4 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     player.y = 202;
     requestAnimationFrame(loop.step.bind(loop));
   });
+
+  document.addEventListener('keydown', (e) => {
+    debugger;
+  });
 });
