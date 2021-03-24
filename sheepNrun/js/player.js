@@ -24,6 +24,11 @@ class Player {
 
     this.lastUpdate = 0;
     this.updateEvery = 200;
+    this.isDead = false;
+  }
+
+  die() {
+    this.isDead = true;
   }
 
   init() {
