@@ -8,7 +8,14 @@ class Loop {
 
   update(timestamp) {}
 
-  render() {}
+  render() {
+    this.background.render(
+      this.context.canvas.width,
+      this.context.canvas.height,
+    );
+    this.platforms.forEach((platform) => platform.render());
+    this.player.render();
+  }
 
   step(timestamp) {
     this.update(timestamp);
