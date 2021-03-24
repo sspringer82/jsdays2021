@@ -6,7 +6,9 @@ class Loop {
     this.platforms = platforms;
   }
 
-  update(timestamp) {}
+  update(timestamp) {
+    this.player.update(timestamp);
+  }
 
   render() {
     this.background.render(
