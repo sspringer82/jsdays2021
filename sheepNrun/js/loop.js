@@ -4,11 +4,18 @@ class Loop {
     this.player = player;
     this.background = background;
     this.platformCollection = platformCollection;
+    this.isMoving = false;
+  }
+
+  toggleMoving() {
+    this.isMoving = !this.isMoving;
   }
 
   update(timestamp) {
     this.player.update(timestamp);
-    this.platformCollection.update(timestamp);
+    if (this.isMoving) {
+      this.platformCollection.update(timestamp);
+    }
   }
 
   render() {
