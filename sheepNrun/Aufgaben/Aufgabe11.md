@@ -1,10 +1,10 @@
 # Aufgabe 11: Audio
 
-Während des Spiels soll eine Hintergrundmusik abgespielt werden. Lade hierfür meine der music<N>.wav-Dateien aus dem audio-Verzeichnis.
+Während des Spiels soll eine Hintergrundmusik abgespielt werden. Lade hierfür eine der `music<N>.wav`-Dateien aus dem audio-Verzeichnis.
 
-Springt das Schaf, soll ein jump<N>.wav-Sound gespielt werden.
+Springt das Schaf, soll ein `jump<N>.wav`-Sound gespielt werden.
 
-Stirbt das Schaf, soll drop.wav abgespielt werden.
+Stirbt das Schaf, soll `drop.wav` abgespielt werden.
 
 ## Hinweis
 
