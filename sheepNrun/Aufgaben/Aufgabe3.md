@@ -2,7 +2,10 @@
 
 Zeichne das Schaf, erstmal noch ohne Animation. Zeichne dafür das erste Bild aus dem Tileset `assets/Black_Sheep_Idle.png`. Zeichne es 1/3 so groß wie das Quellbild.
 
-Bildgröße der einzelnen Animationsphasen im Tileset: **325\*464**
+Bildgröße der einzelnen Animationsphasen im Tileset:
+
+- Höhe: **464**
+- Breite: **325**
 
 Player-Y: **202**
 
