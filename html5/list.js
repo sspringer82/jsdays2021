@@ -1,4 +1,5 @@
 import model from './model.js';
+import copyToClipboard from './clipboard.js';
 
 class List extends HTMLElement {
   constructor() {
@@ -74,6 +75,22 @@ class List extends HTMLElement {
     editButton.dataset.id = data.id;
     editButton.innerText = 'edit';
     tr.appendChild(editButton);
+
+    // copy username
+    const copyUsernameButton = document.createElement('button');
+    copyUsernameButton.classList.add('copy');
+    copyUsernameButton.dataset.id = data.id;
+    copyUsernameButton.innerText = 'copy username';
+    copyUsernameButton.onclick = () => copyToClipboard(data.username);
+    tr.appendChild(copyUsernameButton);
+
+    // copy password button
+    const copyPasswordButton = document.createElement('button');
+    copyPasswordButton.classList.add('copy');
+    copyPasswordButton.dataset.id = data.id;
+    copyPasswordButton.innerText = 'copy password';
+    copyPasswordButton.onclick = () => copyToClipboard(data.password);
+    tr.appendChild(copyPasswordButton);
 
     table.appendChild(tr);
   }
