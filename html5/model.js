@@ -9,9 +9,9 @@ db.version(1).stores({
 const model = {
   save(entry) {
     if (entry.id) {
-      this.editElement(entry);
+      return this.editElement(entry);
     } else {
-      this.addElement(entry);
+      return this.addElement(entry);
     }
   },
   async addElement(entry) {
@@ -37,7 +37,7 @@ const model = {
   },
   async getOneById(id) {
     const data = await db.pw.get(id);
-    data.password = await decript(data.password);
+    data.password = await decrypt(data.password);
     return data;
   },
 };

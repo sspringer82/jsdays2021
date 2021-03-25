@@ -1,4 +1,10 @@
-import { db } from './model.js';
+import Dexie from './node_modules/dexie/dist/dexie.mjs';
+
+const db = new Dexie('pw');
+db.version(1).stores({
+  pw: '++id, username, password, url',
+  secret: '++id',
+});
 
 const enc = new TextEncoder();
 const dec = new TextDecoder();
@@ -73,7 +79,7 @@ export async function decrypt(encryptedMessage) {
       await createKey();
     }
     const iv = (await db.secret.toArray())[0].iv;
-    const decryptedBuffer = await window.crypto.subtle.decrypt(
+    const decryptedBuffer = await crypto.subtle.decrypt(
       {
         name: 'AES-GCM',
         iv,
