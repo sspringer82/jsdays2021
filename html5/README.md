@@ -12,3 +12,4 @@
 - https://caniuse.com/
 - https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=de
 - https://www.polymer-project.org/
+- https://developer.mozilla.org/de/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
