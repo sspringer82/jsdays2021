@@ -1,3 +1,8 @@
+const db = new Dexie('pw');
+db.version(1).stores({
+  pw: '++id, username, password, url',
+});
+
 const model = {
   save(entry) {
     if (entry.id) {
@@ -7,10 +12,8 @@ const model = {
     }
   },
   addElement(entry) {
-    const entries = this.getAllElements();
-    entry.id =
-      localStorage.length === 0 ? 1 : Math.max(...entries.map((e) => e.id)) + 1;
-    localStorage.setItem(entry.id, JSON.stringify(entry));
+    delete entry.id;
+    return db.pw.add(entry);
   },
   editElement(entry) {
     localStorage.setItem(entry.id, JSON.stringify(entry));
