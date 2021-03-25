@@ -10,7 +10,7 @@ Installiere Dexie (https://dexie.org/) und stelle die Persistenz von localStorag
 
 **entweder**
 
-in der index.html: `node_modules/dexie/dist/dexie.js`
+in der index.html: `<script src="node_modules/dexie/dist/dexie.js"></script>`
 
 **oder**
 
