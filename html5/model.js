@@ -1,6 +1,7 @@
 const db = new Dexie('pw');
 db.version(1).stores({
   pw: '++id, username, password, url',
+  secret: '++id',
 });
 
 const model = {
@@ -16,23 +17,16 @@ const model = {
     return db.pw.add(entry);
   },
   editElement(entry) {
-    localStorage.setItem(entry.id, JSON.stringify(entry));
+    return db.pw.update(entry.id, entry);
   },
   deleteElement(id) {
-    localStorage.removeItem(id);
+    return db.pw.delete(id);
   },
   getAllElements() {
-    const data = [];
-    for (let i = 0; i < localStorage.length; i++) {
-      data.push(this.getOneByIndex(i));
-    }
-    return data;
-  },
-  getOneByIndex(i) {
-    return JSON.parse(localStorage.getItem(localStorage.key(i)));
+    return db.pw.toArray();
   },
   getOneById(id) {
-    return JSON.parse(localStorage.getItem(id));
+    return db.pw.get(id);
   },
 };
 
